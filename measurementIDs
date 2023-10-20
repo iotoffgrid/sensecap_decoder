@@ -1,0 +1,109 @@
+https://sensecap-docs.seeed.cc/measurement_list.html
+
+List of Measurement IDs
+Measurement ID 	Measurement Name 	Value Range 	Unit 	Remark
+4097 	Air Temperature 	-40~90 	℃ 	
+4098 	Air Humidity 	0~100 	% RH 	
+4099 	Light Intensity 	0~188000 	Lux 	
+4100 	CO2 	0~10000 	ppm 	
+4101 	Barometric Pressure 	300~1100000 	Pa 	
+4102 	Soil Temperature 	-30~70 	℃ 	
+4103 	Soil Moisture 	0~100 	% 	
+4104 	Wind Direction 	0~360 	° 	
+4105 	Wind Speed 	0~60 	m/s 	
+4106 	pH 	0~14 	PH 	
+4107 	Light Quantum 	0~5000 	umol/㎡s 	
+4108 	Electrical Conductivity 	0~23 	mS/cm 	
+4109 	Dissolved Oxygen 	0~20 	mg/L 	
+4110 	Soil Volumetric Water Content 	0~100 	% 	
+4111 	Soil Electrical Conductivity 	0~23 	mS/cm 	Deprecated,please use 4108 instead
+4112 	Soil Temperature(Soil Temperature, VWC & EC Sensor) 	-40~60 	℃ 	Deprecated,please use 4102 instead
+4113 	Rainfall Hourly 	0~240 	mm/hour 	
+4115 	Distance 	28~250 	cm 	
+4116 	Water Leak 	true / false 		
+4117 	Liguid Level 	0~500 	cm 	
+4118 	NH3 	0~100 	ppm 	
+4119 	H2S 	0~100 	ppm 	
+4120 	Flow Rate 	0~65535 	m3/h 	
+4121 	Total Flow 	0~6553599 	m3 	
+4122 	Oxygen Concentration 	0~25 	%vol 	
+4123 	Water Eletrical Conductivity 	0~20000 	us/cm 	
+4124 	Water Temperature 	-40~80 	℃ 	
+4125 	Soil Heat Flux 	-500~500 	W/㎡ 	
+4126 	Sunshine Duration 	0~24 	h 	
+4127 	Total Solar Radiation 	0~5000 	W/㎡ 	
+4128 	Water Surface Evaporation 	0~10000 	mm 	
+4129 	Photosynthetically Active Radiation(PAR) 	0～5000 	umol/㎡s 	
+4130 	Accelerometer 	0,0,0~x.xx,y.yy,z.zz 	m/s 	
+4131 	Sound Intensity 	0~100 		
+4133 	Soil Tension 	-100~0 	KPA 	
+4134 	Salinity 	0~20000 	mg/L 	
+4135 	TDS 	0~20000 	mg/L 	
+4136 	Leaf Temperature 	0~100 	℃ 	
+4137 	Leaf Wetness 	-40~85 	% 	
+4138 	Soil Moisture-10cm 	0~100 	% 	
+4139 	Soil Moisture-20cm 	0~100 	% 	
+4140 	Soil Moisture-30cm 	0~100 	% 	
+4141 	Soil Moisture-40cm 	0~100 	% 	
+4142 	Soil Temperature-10cm 	-30~70 	℃ 	
+4143 	Soil Temperature-20cm 	-30~70 	℃ 	
+4144 	Soil Temperature-30cm 	-30~70 	℃ 	
+4145 	Soil Temperature-40cm 	-30~70 	℃ 	
+4146 	PM2.5 	0~1000 	μg/m3 	
+4147 	PM10 	0~2000 	μg/m3 	
+4148 	Noise 	30~130 	dB 	
+4150 	AccelerometerX 	-49.99~49.99 	m/s² 	
+4151 	AccelerometerY 	-49.99~49.99 	m/s² 	
+4152 	AccelerometerZ 	-49.99~49.99 	m/s² 	
+4154 	Salinity 	0~70 	PSU 	
+4155 	ORP 	-1500~-1500 	mV 	
+4156 	Turbidity 	0~1000 	NTU 	
+4157 	Ammonia ion 	0~100 	mg/L 	
+4158 	Eletrical Conductivity 	0~23 	mS/cm 	
+4159 	Eletrical Conductivity 	0~23 	mS/cm 	
+4160 	Eletrical Conductivity 	0~23 	mS/cm 	
+4161 	Eletrical Conductivity 	0~23 	mS/cm 	
+4162 	N Content 	0~1999 	mg/kg 	
+4163 	P Content 	0~1999 	mg/kg 	
+4164 	K Content 	0~1999 	mg/kg 	
+4165 	Measurement1 	~ 		
+4166 	Measurement2 	~ 		
+4167 	Measurement3 	~ 		
+4168 	Measurement4 	~ 		
+4169 	Measurement5 	~ 		
+4170 	Measurement6 	~ 		
+4171 	Measurement7 	~ 		
+4172 	Measurement8 	~ 		
+4173 	Measurement9 	~ 		
+4174 	Measurement10 	~ 		
+4175 	AI Detection No.01 	1.00~39.99 		
+4176 	AI Detection No.02 	1.00~39.99 		
+4177 	AI Detection No.03 	1.00~39.99 		
+4178 	AI Detection No.04 	1.00~39.99 		
+4179 	AI Detection No.05 	1.00~39.99 		
+4180 	AI Detection No.06 	1.00~39.99 		
+4181 	AI Detection No.07 	1.00~39.99 		
+4182 	AI Detection No.08 	1.00~39.99 		
+4183 	AI Detection No.09 	1.00~39.99 		
+4184 	AI Detection No.10 	1.00~39.99 		
+4190 	UV Index 	0~16.0 		
+4191 	Peak Wind Gust 	0~100 	m/s 	
+4192 	Sound Intensity 	0~1023 	dB 	
+4193 	Light Intensity 	0~1023 		
+4195 	TVOC 	0~60000 	ppb 	
+4196 	Soil moisture intensity 	0~1023 		
+4197 	longitude 	-180~180 	° 	
+4198 	latitude 	-180~180 	° 	
+4199 	Light 	0~100 	% 	
+4200 	SOS Event 	0~1 		
+4201 	Ultraviolet Radiation 	0~200 	W/㎡ 	
+4202 	Dew point temperature 	0~50 	℃ 	
+4203 	Temperature 	-40~150 	℃ 	
+4204 	Soil Pore Water Eletrical Conductivity 	0~23 	mS/cm 	
+4205 	Epsilon 	0~100 		
+4206 	VOC_INDEX 	~ 		
+4207 	Noise 	~ 		
+4208 	Custom event 	~ 		
+5001 	Wi-Fi MAC Address 	~ 		
+5002 	Bluetooth Beacon MAC Address 	~ 		
+5100 	Switch 	100~200 		
