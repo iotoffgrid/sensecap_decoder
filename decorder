@@ -452,28 +452,28 @@ function Decoder (bytes, port) {
                 })
                 break
             case 5100:
-                datacakeFields.push({
+                iotoffgridFields.push({
                     'field': 'SWITCH', 'value': value
                 })
                 break
             case 9990100:
-                datacakeFields.push({
+                iotoffgridFields.push({
                     'field': 'BATTERY', 'value': message.battery
                 })
                 break
             case 9990200:
-                datacakeFields.push({
+                iotoffgridFields.push({
                     'field': 'INTERVAL', 'value': message.interval
                 })
                 break
             case 9990300:
-                datacakeFields.push({
+                iotoffgridFields.push({
                     'field': 'REMOVED', 'value': message.interval
                 })
                 break
         }
     }
-    return Serialize(datacakeFields[0])
+    return Serialize(iotoffgridFields[0])
 }
 
 function crc16Check (data) {
