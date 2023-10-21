@@ -109,7 +109,7 @@ function Decoder (bytes, port) {
 
     // return
     //return decoded;
-    var iotoffgridFields = []
+    var datacakeFields = []
     var messages = decoded.messages
     for (var i = 0; i < messages.length; i++) {
         var message = messages[i]
@@ -118,362 +118,363 @@ function Decoder (bytes, port) {
         var value = message.measurementValue
         switch (type) {
             case 'upload_battery':
-                iotoffgridFields.push({
-                    'BATTERY': message.battery
+                datacakeFields.push({
+                    'field': 'BATTERY', 'value': message.battery
                 })
                 break
             case 'upload_interval':
-                iotoffgridFields.push({
-                    'UPLOAD_INTERVAL': message.interval
+                datacakeFields.push({
+                    'field': 'UPLOAD_INTERVAL', 'value': message.interval
                 })
                 break
             case 'upload_version':
-                iotoffgridFields.push({
-                    'HARDWARE_VERSION': message.hardwareVersion
+                datacakeFields.push({
+                    'field': 'HARDWARE_VERSION', 'value': message.hardwareVersion
                 }, {
-                    'SOFTWARE_VERSION': message.softwareVersion
+                    'field': 'SOFTWARE_VERSION', 'value': message.softwareVersion
                 })
                 break
             case 'model_info':
-                iotoffgridFields.push({
-                    'MODEL_INFO': { detectionType: message.detectionType, modelId: message.modelId, modelVer: message.modelVer }
+                datacakeFields.push({
+                    'field': 'MODEL_INFO',
+                    'value': { detectionType: message.detectionType, modelId: message.modelId, modelVer: message.modelVer }
                 })
                 break
         }
         switch (id) {
             case 4097:
-                iotoffgridFields.push({
-                    'TEMPERATURE': value
+                datacakeFields.push({
+                    'field': 'TEMPERATURE', 'value': value
                 })
                 break
             case 4098:
-                iotoffgridFields.push({
-                    'HUMIDITY': value
+                datacakeFields.push({
+                    'field': 'HUMIDITY', 'value': value
                 })
                 break
             case 4099:
-                iotoffgridFields.push({
+                datacakeFields.push({
                     'light-intensity': value
                 })
                 break
             case 4100:
-                iotoffgridFields.push({
-                    'CO2': value
+                datacakeFields.push({
+                    'field': 'CO2', 'value': value
                 })
                 break
             case 4101:
-                iotoffgridFields.push({
-                    'BAROMETRIC_PRESSURE': value
+                datacakeFields.push({
+                    'field': 'BAROMETRIC_PRESSURE', 'value': value
                 })
                 break
             case 4102:
-                iotoffgridFields.push({
-                    'SOIL_TEMPERATURE': value
+                datacakeFields.push({
+                    'field': 'SOIL_TEMPERATURE', 'value': value
                 })
                 break
             case 4103:
-                iotoffgridFields.push({
-                    'SOIL_MOISTURE': value
+                datacakeFields.push({
+                    'field': 'SOIL_MOISTURE', 'value': value
                 })
                 break
             case 4104:
-                iotoffgridFields.push({
-                    'WIND_DIRECTION': value
+                datacakeFields.push({
+                    'field': 'WIND_DIRECTION', 'value': value
                 })
                 break
             case 4105:
-                iotoffgridFields.push({
-                    'WIND_SPEED': value
+                datacakeFields.push({
+                    'field': 'WIND_SPEED', 'value': value
                 })
                 break
             case 4106:
-                iotoffgridFields.push({
-                    'PH': value
+                datacakeFields.push({
+                    'field': 'PH', 'value': value
                 })
                 break
             case 4107:
-                iotoffgridFields.push({
-                    'LIGHT_QUANTUM': value
+                datacakeFields.push({
+                    'field': 'LIGHT_QUANTUM', 'value': value
                 })
                 break
             case 4108:
-                iotoffgridFields.push({
-                    'ELECTRICAL_CONDUCTIVITY': value
+                datacakeFields.push({
+                    'field': 'ELECTRICAL_CONDUCTIVITY', 'value': value
                 })
                 break
             case 4109:
-                iotoffgridFields.push({
-                    'DISSOLVED_OXYGEN': value
+                datacakeFields.push({
+                    'field': 'DISSOLVED_OXYGEN', 'value': value
                 })
                 break
             case 4110:
-                iotoffgridFields.push({
-                    'SOIL_VOLUMETRIC_WATER_CONTENT': value
+                datacakeFields.push({
+                    'soil-volumetric-water-content': value
                 })
                 break
             case 4111:
-                iotoffgridFields.push({
-                    'SOIL_ELECTRICAL_CONDUCTIVITY': value
+                datacakeFields.push({
+                    'soil-electrical-conductivity': value
                 })
                 break
             case 4112:
-                iotoffgridFields.push({
-                    'SOIL_TEMPERATURE(SOIL_TEMPERATURE, VWC & EC Sensor)': value
+                datacakeFields.push({
+                    'soil-temperature': value
                 })
                 break
             case 4113:
-                iotoffgridFields.push({
-                    'RAINFALL_HOURLY': value
+                datacakeFields.push({
+                    'field': 'RAINFALL_HOURLY', 'value': value
                 })
                 break
             case 4115:
-                iotoffgridFields.push({
-                    'DISTANCE': value
+                datacakeFields.push({
+                    'field': 'DISTANCE', 'value': value
                 })
                 break
             case 4116:
-                iotoffgridFields.push({
-                    'WATER_LEAK': value
+                datacakeFields.push({
+                    'field': 'WATER_LEAK', 'value': value
                 })
                 break
             case 4117:
-                iotoffgridFields.push({
-                    'LIGUID_LEVEL': value
+                datacakeFields.push({
+                    'field': 'LIGUID_LEVEL', 'value': value
                 })
                 break
             case 4118:
-                iotoffgridFields.push({
-                    'NH3': value
+                datacakeFields.push({
+                    'field': 'NH3', 'value': value
                 })
                 break
             case 4119:
-                iotoffgridFields.push({
-                    'H2S': value
+                datacakeFields.push({
+                    'field': 'H2S', 'value': value
                 })
                 break
             case 4120:
-                iotoffgridFields.push({
-                    'FLOW_RATE': value
+                datacakeFields.push({
+                    'field': 'FLOW_RATE', 'value': value
                 })
                 break
             case 4121:
-                iotoffgridFields.push({
-                    'TOTAL_FLOW': value
+                datacakeFields.push({
+                    'field': 'TOTAL_FLOW', 'value': value
                 })
                 break
             case 4122:
-                iotoffgridFields.push({
-                    'OXYGEN_CONCENTRATION': value
+                datacakeFields.push({
+                    'field': 'OXYGEN_CONCENTRATION', 'value': value
                 })
                 break
             case 4123:
-                iotoffgridFields.push({
-                    'WATER_ELETRICAL_CONDUCTIVITY': value
+                datacakeFields.push({
+                    'field': 'WATER_ELETRICAL_CONDUCTIVITY', 'value': value
                 })
                 break
             case 4124:
-                iotoffgridFields.push({
-                    'WATER_TEMPERATURE': value
+                datacakeFields.push({
+                    'field': 'WATER_TEMPERATURE', 'value': value
                 })
                 break
             case 4125:
-                iotoffgridFields.push({
-                    'SOIL_HEAT_FLUX': value
+                datacakeFields.push({
+                    'field': 'SOIL_HEAT_FLUX', 'value': value
                 })
                 break
             case 4126:
-                iotoffgridFields.push({
-                    'SUNSHINE_DURATION': value
+                datacakeFields.push({
+                    'field': 'SUNSHINE_DURATION', 'value': value
                 })
                 break
             case 4127:
-                iotoffgridFields.push({
-                    'TOTAL_SOLAR_RADIATION': value
+                datacakeFields.push({
+                    'field': 'TOTAL_SOLAR_RADIATION', 'value': value
                 })
                 break
             case 4128:
-                iotoffgridFields.push({
-                    'WATER_SURFACE_EVAPORATION': value
+                datacakeFields.push({
+                    'field': 'WATER_SURFACE_EVAPORATION', 'value': value
                 })
                 break
             case 4129:
-                iotoffgridFields.push({
-                    'PHOTOSYNTHETICALLY_ACTIVE_RADIATION_PAR': value
+                datacakeFields.push({
+                    'field': 'PHOTOSYNTHETICALLY_ACTIVE_RADIATION_PAR', 'value': value
                 })
                 break
             case 4130:
-                iotoffgridFields.push({
-                    'ACCELEROMETER': value
+                datacakeFields.push({
+                    'field': 'ACCELEROMETER', 'value': value
                 })
                 break
             case 4131:
-                iotoffgridFields.push({
-                    'VOLUME': value
+                datacakeFields.push({
+                    'field': 'VOLUME', 'value': value
                 })
                 break
             case 4133:
-                iotoffgridFields.push({
-                    'SOIL_TENSION': value
+                datacakeFields.push({
+                    'field': 'SOIL_TENSION', 'value': value
                 })
                 break
             case 4134:
-                iotoffgridFields.push({
-                    'SALINITY': value
+                datacakeFields.push({
+                    'field': 'SALINITY', 'value': value
                 })
                 break
             case 4135:
-                iotoffgridFields.push({
-                    'TDS': value
+                datacakeFields.push({
+                    'field': 'TDS', 'value': value
                 })
                 break
             case 4136:
-                iotoffgridFields.push({
-                    'LEAF_TEMPERATURE': value
+                datacakeFields.push({
+                    'field': 'LEAF_TEMPERATURE', 'value': value
                 })
                 break
             case 4137:
-                iotoffgridFields.push({
-                    'LEAF_WETNESS': value
+                datacakeFields.push({
+                    'field': 'LEAF_WETNESS', 'value': value
                 })
                 break
             case 4138:
-                iotoffgridFields.push({
-                    'SOIL_MOISTURE_10CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_MOISTURE_10CM', 'value': value
                 })
                 break
             case 4139:
-                iotoffgridFields.push({
-                    'SOIL_MOISTURE_20CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_MOISTURE_20CM', 'value': value
                 })
                 break
             case 4140:
-                iotoffgridFields.push({
-                    'SOIL_MOISTURE_30CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_MOISTURE_30CM', 'value': value
                 })
                 break
             case 4141:
-                iotoffgridFields.push({
-                    'SOIL_MOISTURE_40CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_MOISTURE_40CM', 'value': value
                 })
                 break
             case 4142:
-                iotoffgridFields.push({
-                    'SOIL_TEMPERATURE_10CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_TEMPERATURE_10CM', 'value': value
                 })
                 break
             case 4143:
-                iotoffgridFields.push({
-                    'SOIL_TEMPERATURE_20CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_TEMPERATURE_20CM', 'value': value
                 })
                 break
             case 4144:
-                iotoffgridFields.push({
-                    'SOIL_TEMPERATURE_30CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_TEMPERATURE_30CM', 'value': value
                 })
                 break
             case 4145:
-                iotoffgridFields.push({
-                    'SOIL_TEMPERATURE_40CM': value
+                datacakeFields.push({
+                    'field': 'SOIL_TEMPERATURE_40CM', 'value': value
                 })
-              break
+                break
             case 4146:
-                iotoffgridFields.push({
-                    'PM2_5': value
+                datacakeFields.push({
+                    'field': 'PM2_5', 'value': value
                 })
                 break
             case 4147:
-                iotoffgridFields.push({
-                    'PM10', 'value': value
+                datacakeFields.push({
+                    'field': 'PM10', 'value': value
                 })
                 break
             case 4148:
-                iotoffgridFields.push({
-                    'NOISE': value
+                datacakeFields.push({
+                    'field': 'NOISE', 'value': value
                 })
                 break
             case 4150:
-                iotoffgridFields.push({
-                    'ACCELEROMETERX': value
+                datacakeFields.push({
+                    'field': 'ACCELEROMETERX', 'value': value
                 })
                 break
             case 4151:
-                iotoffgridFields.push({
-                    'ACCELEROMETERY': value
+                datacakeFields.push({
+                    'field': 'ACCELEROMETERY', 'value': value
                 })
                 break
             case 4152:
-                iotoffgridFields.push({
-                    'ACCELEROMETERZ': value
+                datacakeFields.push({
+                    'field': 'ACCELEROMETERZ', 'value': value
                 })
                 break
             case 4175:
-                iotoffgridFields.push({
-                    'AI_DETECTION_NO_01': value
+                datacakeFields.push({
+                    'field': 'AI_DETECTION_NO_01', 'value': value
                 })
                 break
             case 4176:
-                iotoffgridFields.push({
-                    'AI_DETECTION_NO_02': value
+                datacakeFields.push({
+                    'field': 'AI_DETECTION_NO_02', 'value': value
                 })
                 break
             case 4177:
-                iotoffgridFields.push({
-                    'AI_DETECTION_NO_03': value
+                datacakeFields.push({
+                    'field': 'AI_DETECTION_NO_03', 'value': value
                 })
                 break
             case 4178:
-                iotoffgridFields.push({
-                    'AI_DETECTION_NO_04', 'value': value
+                datacakeFields.push({
+                    'field': 'AI_DETECTION_NO_04', 'value': value
                 })
                 break
             case 4179:
-                iotoffgridFields.push({
+                datacakeFields.push({
                     'field': 'AI_DETECTION_NO_05', 'value': value
                 })
                 break
             case 4180:
-                iotoffgridFields.push({
+                datacakeFields.push({
                     'field': 'AI_DETECTION_NO_06', 'value': value
                 })
                 break
             case 4181:
-                iotoffgridFields.push({
+                datacakeFields.push({
                     'field': 'AI_DETECTION_NO_07', 'value': value
                 })
                 break
             case 4182:
-                iotoffgridFields.push({
+                datacakeFields.push({
                     'field': 'AI_DETECTION_NO_08', 'value': value
                 })
                 break
             case 4183:
-                iotoffgridFields.push({
+                datacakeFields.push({
                     'field': 'AI_DETECTION_NO_09', 'value': value
                 })
                 break
             case 5100:
-                iotoffgridFields.push({
-                    'SWITCH': value
+                datacakeFields.push({
+                    'field': 'SWITCH', 'value': value
                 })
                 break
             case 9990100:
-                iotoffgridFields.push({
-                    'BATTERY': message.battery
+                datacakeFields.push({
+                    'field': 'BATTERY', 'value': message.battery
                 })
                 break
             case 9990200:
-                iotoffgridFields.push({
-                    'INTERVAL': message.interval
+                datacakeFields.push({
+                    'field': 'INTERVAL', 'value': message.interval
                 })
                 break
             case 9990300:
-                iotoffgridFields.push({
-                    'REMOVED': message.interval
+                datacakeFields.push({
+                    'field': 'REMOVED', 'value': message.interval
                 })
                 break
         }
     }
-    return Serialize(iotoffgridFields[0])
+    return Serialize(datacakeFields[0])
 }
 
 function crc16Check (data) {
